@@ -269,3 +269,34 @@ canvas {
     height: 100%;
     pointer-events: none;
 }
+/* Ensure the body allows scrolling */
+body {
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: pink white; /* Firefox */
+}
+
+/* Custom scrollbar for Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: white; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: pink; /* Color of the scrollbar */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hotpink; /* Darker pink on hover */
+}
+
+/* Ensure timeline section allows scrolling if it overflows */
+.timeline {
+    max-height: 80vh; /* Set a max height to allow scrolling */
+    overflow-y: auto; /* Enable scrolling inside timeline */
+    padding: 10px;
+}
